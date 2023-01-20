@@ -5,6 +5,7 @@ import { saveAs } from 'file-saver';
 import uniqid from 'uniqid';
 import Editor from './components/Editor';
 import Preview from './components/Preview';
+import generateData from './utils/generateData';
 import './styles/App.css';
 
 function App() {
@@ -30,7 +31,24 @@ function App() {
     transformRef.current?.centerView(1, 0);
     takeScreenshot(screenshotRef.current).then(saveAs);
   };
-  
+
+  return (
+      <div className='App'>
+          <Editor 
+            data={data}
+            setData={setData}
+            autofill={() => setData(generateData())}
+            getImage={getImage}
+            togglePreview={togglePreview}
+          />
+          <Preview 
+            data={data}
+            screenshotRef={screenshotRef}
+            transformRef={transformRef}
+            state={previewState}
+          />
+      </div>
+  )
 }
 
 export default App;
