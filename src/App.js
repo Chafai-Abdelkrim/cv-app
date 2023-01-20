@@ -27,7 +27,7 @@ function App() {
   const transformRef = createRef(null);
   const [, takeScreenshot] = useScreenshot({ type: 'image/png', quality: 1.0 });
   const [previewState, togglePreview] = useTransition({ timeout: 300 });
-  const getImage = () => {
+  const saveCV = () => {
     transformRef.current?.centerView(1, 0);
     takeScreenshot(screenshotRef.current).then(saveAs);
   };
@@ -38,7 +38,7 @@ function App() {
             data={data}
             setData={setData}
             autofill={() => setData(generateData())}
-            getImage={getImage}
+            saveCV={saveCV}
             togglePreview={togglePreview}
           />
           <Preview 
