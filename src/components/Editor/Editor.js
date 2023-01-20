@@ -1,0 +1,10 @@
+import { useState } from "react";
+import uniqid from 'uniqid';
+import Info from './components/Info';
+import Contact from './components/Contact';
+import Education from './components/Education';
+import Work from './components/Work';
+import Skills from './components/Skill';
+import Navigator from './components/Navigator';
+import Button from '../Button';
+import GithubButton from './components/GithubButton';
