@@ -28,7 +28,7 @@ function Editor(props) {
   const autofillBtn = (
     <Button
       icon={<RiEditLine />}
-      lable="Autofill"
+      label="Autofill"
       handleClick={() => {
         autofill();
         setActivePage(editors.length - 1);
@@ -42,19 +42,46 @@ function Editor(props) {
   let editor;
   switch (editors[activePage].name) {
     case 'Info':
-      editor = <Info data={data} setData={setData}/>;
+      editor = <Info data={data} setData={setData} />;
       break;
     case 'Contact':
-      editor = <Contact data={data} setData={setData}/>;
+      editor = <Contact data={data} setData={setData} />;
       break;
     case 'Education':
-      editor = <Education data={data} setData={setData}/>;
+      editor = <Education data={data} setData={setData} />;
       break;
     case 'Work':
-      editor = <Work data={data} setData={setData}/>;
+      editor = <Work data={data} setData={setData} />;
       break;
     case 'Skills':
-      editor = <Skills data={data} setData={setData}/>;
+      editor = <Skills data={data} setData={setData} />;
       break;
   }
+
+  return (
+    <div className="Editor">
+      <h3>{editors[activePage].name}</h3>
+      {editor}
+      <Navigator 
+        index={activePage}
+        setIndex={setActivePage}
+        items={editors}
+        firstButton={autofillBtn}
+        lastButton={saveBtn}
+      />
+      <GithubButton username='Abdelkrim Chafai' />
+      <Button 
+        className='PreviewBtn'
+        icon={isPreviewVisible ? <RiCodeLine /> : <RiEyeLine />}
+        label={isPreviewVisible ? 'Editor' : 'Preview'}
+        handleClick={() => {
+          togglePreviewVisible(prevState => !prevState);
+          togglePreview();
+        }}
+      />
+    </div>
+  );
 }
+
+
+export default Editor;
