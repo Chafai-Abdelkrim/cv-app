@@ -22,7 +22,7 @@ editors.forEach((editor) => (editor.key = uniqid()));
 
 function Editor(props) {
   const { data, setData, autofill, saveCV, togglePreview } = props;
-  const [activeEditor, setActiveEditor] = useState(0);
+  const [activePage, setActivePage] = useState(0);
   const [isPreviewVisible, togglePreviewVisible] = useState(false);
 
   const autofillBtn = (
@@ -31,11 +31,30 @@ function Editor(props) {
       lable="Autofill"
       handleClick={() => {
         autofill();
-        setActiveEditor(editors.length - 1);
+        setActivePage(editors.length - 1);
       }}
     />
   );
   const saveBtn = (
     <Button icon={<RiSaveLine />} lable="Save" handleClick={saveCV} />
   );
+
+  let editor;
+  switch (editors[activePage].name) {
+    case 'Info':
+      editor = <Info data={data} setData={setData}/>;
+      break;
+    case 'Contact':
+      editor = <Contact data={data} setData={setData}/>;
+      break;
+    case 'Education':
+      editor = <Education data={data} setData={setData}/>;
+      break;
+    case 'Work':
+      editor = <Work data={data} setData={setData}/>;
+      break;
+    case 'Skills':
+      editor = <Skills data={data} setData={setData}/>;
+      break;
+  }
 }
