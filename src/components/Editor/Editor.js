@@ -4,7 +4,7 @@ import Info from './components/Info';
 import Contact from './components/Contact';
 import Education from './components/Education';
 import Work from './components/Work';
-import Skills from './components/Skill';
+import Skills from './components/Skills';
 import Navigator from './components/Navigator';
 import Button from '../Button';
 import GithubButton from './components/GithubButton';
