@@ -69,7 +69,7 @@ function Editor(props) {
         firstButton={autofillBtn}
         lastButton={saveBtn}
       />
-      <GithubButton username='Abdelkrim Chafai' />
+      <GithubButton username='Chafai-Abdelkrim' />
       <Button 
         className='PreviewBtn'
         icon={isPreviewVisible ? <RiCodeLine /> : <RiEyeLine />}
