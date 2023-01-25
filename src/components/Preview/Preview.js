@@ -50,7 +50,15 @@ function Preview(props) {
           contentClass="PreviewContent"
         >
           <div className="Resume" ref={screenshotRef}>
-              
+            <Header info={info} />
+            <Sidebar contact={contact} education={education} skills={skills} />
+            <main>
+              <section className="Profile">
+                <h3>PROFILE</h3>
+                {info.profile && <p>{info.profile}</p>}
+              </section>
+              <Experience name="Work Experience" work={work} />
+            </main>
           </div>
         </TransformComponent>
       </TransformWrapper>
