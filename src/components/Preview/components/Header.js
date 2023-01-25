@@ -1,6 +1,6 @@
 import capitalize from 'capitalize';
 
-function Info({ info }) {
+function Header({ info }) {
   const { firstName = '', lastName = '', professionalTitle = '' } = info;
 
   return (
@@ -14,4 +14,4 @@ function Info({ info }) {
   );
 }
 
-export default Info;
+export default Header;
