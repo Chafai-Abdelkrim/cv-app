@@ -45,7 +45,7 @@ function App() {
             data={data}
             screenshotRef={screenshotRef}
             transformRef={transformRef}
-            state={previewState}
+            state={previewState.status}
           />
       </div>
   )
