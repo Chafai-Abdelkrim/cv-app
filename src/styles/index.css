@@ -5,3 +5,10 @@
     outline: none;
     border: none;
 }
+
+:root {
+    --clr-light-taupe: #b49275;
+    --clr-porsche: #eba55d;
+    --clr-silver-sand: #c5c4c3;
+    --clr-tuatara: #353431;
+}

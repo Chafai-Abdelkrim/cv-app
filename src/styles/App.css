@@ -1,3 +1,8 @@
 .App {
-    
+    min-height: 100vh;
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
