@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import { useWindowSize } from '@react-hook/window-size';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';

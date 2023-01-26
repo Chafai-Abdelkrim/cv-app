@@ -1,6 +1,6 @@
 import Contact from './Contact';
 import Experience from './Experience';
-import Skills from './Skill';
+import Skills from './Skills';
 
 function Sidebar({ contact, education, skills }) {
   return (

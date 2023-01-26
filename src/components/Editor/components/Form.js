@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import Input from './Input';
 
 function Form(props) {

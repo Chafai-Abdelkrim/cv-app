@@ -1,4 +1,4 @@
-import captilize from 'capitalize';
+import capitalize from 'capitalize';
 
 function Detail(props) {
   const { icon, label, capitalized = true } = props;
@@ -8,7 +8,7 @@ function Detail(props) {
   return (
     <div className="Detail">
       {icon || <span>*</span>}
-      {capitalized ? captilize.words(label) : label}
+      {capitalized ? capitalize.words(label) : label}
     </div>
   );
 }

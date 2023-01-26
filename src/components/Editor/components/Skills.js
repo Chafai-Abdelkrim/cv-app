@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import Input from './Input';
 import Button from '../../Button';
 import { RiAddLine, RiDeleteBin6Line } from 'react-icons/ri';

@@ -56,6 +56,8 @@ function Editor(props) {
     case 'Skills':
       editor = <Skills data={data} setData={setData} />;
       break;
+    default:
+      editor = <h1>Something went wrong</h1>;
   }
 
   return (
