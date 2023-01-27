@@ -77,7 +77,10 @@
     position: absolute;
     left: calc(50% - 23px);
     bottom: -80px;
+    background-color: #f7f7f7 !important;
+    color: var(--clr-light-taupe) !important;
     text-decoration: none;
+    overflow: hidden;
     transition: .3s ease-in-out all;
 }
 
@@ -118,4 +121,17 @@ label {
     margin-left: 6px;
     color: var(--clr-tuatara);
     font-size: 1rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px 14px;
+    color: var(--clr-tuatara);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    transition: all .3s, transform .2s;
 }
