@@ -10,7 +10,7 @@ function GithubButton({ username }) {
       title="Check Out My GitHub"
     >
       <RiGithubLine />
-      {username}
+      <p>{username}</p>
     </a>
   );
 }
