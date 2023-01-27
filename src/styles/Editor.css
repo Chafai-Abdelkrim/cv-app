@@ -97,3 +97,25 @@
 .Editor .GithubButton:hover p {
     display: inline;
 }
+/* previeew button styles */
+.Editor .PreviewBtn {
+    display: none;
+    width: 130px;
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% - 65px);
+    z-index: 2;
+    box-shadow: 0px 8px 15px rgba(128, 96, 11, 0.5);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0px auto;
+}
+
+label {
+    display: block;
+    margin-left: 6px;
+    color: var(--clr-tuatara);
+    font-size: 1rem;
+}

@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import Input from './Input';
 
 function Form(props) {
@@ -7,7 +6,8 @@ function Form(props) {
   return (
     <form className={className}>
       {inputFields.map(({ label, placeholder, type, key }) => {
-          <Input 
+        return (
+          <Input
             key={key}
             label={label}
             placeholder={placeholder}
@@ -15,6 +15,7 @@ function Form(props) {
             data={data}
             handleInput={handleInput}
           />
+        );
       })}
     </form>
   );

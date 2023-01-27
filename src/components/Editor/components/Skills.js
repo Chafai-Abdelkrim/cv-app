@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import Input from './Input';
 import Button from '../../Button';
 import { RiAddLine, RiDeleteBin6Line } from 'react-icons/ri';
@@ -51,21 +50,23 @@ function Skills({ data, setData }) {
       )}
       <form className="Skills">
         {skills.map(({ key }, i) => {
-          <div className="Skill" key={key}>
-            <Input
-              id={i}
-              placeholder={placeholders[i % placeholders.length]}
-              value={skills[i].name}
-              handleInput={handleInput}
-            />
-            <Button
-              className="Delete"
-              icon={<RiDeleteBin6Line />}
-              title="Delete"
-              handleClick={() => deleteItem(i)}
-              alt
-            />
-          </div>;
+          return (
+            <div className="Skill" key={key}>
+              <Input
+                id={i}
+                placeholder={placeholders[i % placeholders.length]}
+                value={skills[i].name}
+                handleInput={handleInput}
+              />
+              <Button
+                className="Delete"
+                icon={<RiDeleteBin6Line />}
+                title="Delete"
+                handleClick={() => deleteItem(i)}
+                alt
+              />
+            </div>
+          );
         })}
       </form>
     </div>
