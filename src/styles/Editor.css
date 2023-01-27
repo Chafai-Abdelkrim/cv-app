@@ -1,0 +1,66 @@
+.Editor {
+    height: 550px;
+    width: 520px;
+    margin-block: 20px;
+    margin-bottom: 80px;
+    padding: 1.8rem;
+    padding-bottom: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: #f7f7f7;
+    color: var(--clr-tuatara);
+    border-radius: 2rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.Editor .Container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-inline: -25px;
+    padding-inline: 25px;
+    overflow-y: auto;
+}
+
+.Editor .Navigator {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    animation: fadeMoveIn .5s ease forwards;
+}
+
+.Editor>.Navigator {
+    width: 100%;
+    padding-inline: 1.5rem;
+    padding-bottom: 1.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.Navigator .Button,
+.Navigator .Button {
+    max-width: 130px;
+    width: 40%;
+}
+
+.Navigator .Dots {
+    height: 40px;
+    margin-inline: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.Navigator .Dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--clr-silver-sand);
+    border-radius: 1vmax;
+    cursor: pointer;
+    transition: background-color .4s, transform .4s;
+}
