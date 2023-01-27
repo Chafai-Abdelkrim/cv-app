@@ -5,4 +5,41 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    background-color: var(--clr-silver-sand);
+}
+
+.Button {
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background-color: var(--clr-light-taupe);
+    color: var(--clr-silver-sand);
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: .3s;
+}
+
+.Button svg {
+    margin-inline: -6px;
+}
+
+.Button.alt {
+    background-color: var(--clr-silver-sand);
+    color: var(--clr-porsche);
+}
+
+.Button.alt:hover {
+    background-color: var(--clr-porsche);
+    color: var(--clr-silver-sand);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.Button:active {
+    transform: scale(0.9);
 }
