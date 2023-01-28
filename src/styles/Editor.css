@@ -135,3 +135,8 @@ textarea {
     font-family: 'Poppins', sans-serif;
     transition: all .3s, transform .2s;
 }
+
+textarea {
+    height: 150px !important;
+    resize: none;
+}  
