@@ -139,4 +139,9 @@ textarea {
 textarea {
     height: 150px !important;
     resize: none;
-}  
+}
+
+textarea:hover,
+input:hover {
+  background-color: var(--clr-silver-sand);
+}
