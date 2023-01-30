@@ -1,39 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
 }
 
 :root {
-    --clr-cool-blue: #5b8291;
-    --clr-light-blue: #98dad9;
-    --clr-dark-blue: #2e424d;
-    --clr-off-white: #EAEBED;
-    --clr-text: #353431;
+  --clr-cool-blue: #5b8291;
+  --clr-light-blue: #98dad9;
+  --clr-dark-blue: #2e424d;
+  --clr-off-white: #eaebed;
+  --clr-text: #353431;
 }
 
 /* Scrollbar CSS */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #2e424d #ffffff;
-  }
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #2e424d #ffffff;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 10px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #2e424d;
-    border-radius: 4px;
-    border: 0px solid #ffffff;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #2e424d;
+  border-radius: 4px;
+  border: 0px solid #ffffff;
+}
