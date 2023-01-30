@@ -180,7 +180,11 @@ form {
 }
 
 .Container > .Navigator > .Button {
-    
+    padding: 0;
+    width: 110px;
+}
+.Container > .Navigator > .Spacer {
+    width: 110px;
 }
 
 .Skills {
