@@ -9,8 +9,9 @@
 }
 
 :root {
-    --clr-light-taupe: #b49275;
-    --clr-porsche: #eba55d;
-    --clr-silver-sand: #c5c4c3;
-    --clr-tuatara: #353431;
+    --clr-cool-blue: #5b8291;
+    --clr-light-blue: #98dad9;
+    --clr-dark-blue: #2e424d;
+    --clr-off-white: #EAEBED;
+    --clr-text: #353431;
 }

@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-color: var(--clr-silver-sand);
+    background-color: var(--clr-dark-blue);
 }
 
 .Button {
@@ -14,9 +14,10 @@
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    background-color: var(--clr-light-taupe);
-    color: var(--clr-silver-sand);
+    background-color: #fff;
+    color: var(--clr-dark-blue);
     border-radius: 1rem;
+    border: 2px solid var(--clr-light-blue);
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -25,18 +26,23 @@
     transition: .3s;
 }
 
+.Button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .Button svg {
     margin-inline: -6px;
 }
 
 .Button.alt {
-    background-color: var(--clr-silver-sand);
-    color: var(--clr-porsche);
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-light-blue);
 }
 
 .Button.alt:hover {
-    background-color: var(--clr-porsche);
-    color: var(--clr-silver-sand);
+    background-color: var(--clr-light-blue);
+    color: var(--clr-dark-blue);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 

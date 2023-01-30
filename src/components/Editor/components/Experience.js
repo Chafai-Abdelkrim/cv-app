@@ -30,7 +30,7 @@ function Experience(props) {
   };
 
   const newButton = (
-    <Button icon={<RiAddLine />} lable="New" handleClick={createItem} alt />
+    <Button icon={<RiAddLine />} label="New" handleClick={createItem} alt />
   );
 
   return (
