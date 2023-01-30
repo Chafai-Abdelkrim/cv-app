@@ -1,147 +1,203 @@
 .Editor {
-    height: 550px;
-    width: 520px;
-    margin-block: 20px;
-    margin-bottom: 80px;
-    padding: 1.8rem;
-    padding-bottom: 80px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    background-color: #f7f7f7;
-    color: var(--clr-tuatara);
-    border-radius: 2rem;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  height: 550px;
+  width: 520px;
+  margin-block: 20px;
+  margin-bottom: 80px;
+  padding: 1.8rem;
+  padding-bottom: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: #f7f7f7;
+  color: var(--clr-tuatara);
+  border-radius: 2rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .Editor .Container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-inline: -25px;
-    padding-inline: 25px;
-    overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-inline: -25px;
+  padding-inline: 25px;
+  overflow-y: auto;
 }
 
 .Editor .Navigator {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    animation: fadeMoveIn .5s ease forwards;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  animation: fadeMoveIn 0.5s ease forwards;
 }
 
-.Editor>.Navigator {
-    width: 100%;
-    padding-inline: 1.5rem;
-    padding-bottom: 1.5rem;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.Editor > .Navigator {
+  width: 100%;
+  padding-inline: 1.5rem;
+  padding-bottom: 1.5rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .Navigator .Button,
 .Navigator .Button {
-    max-width: 130px;
-    width: 40%;
+  max-width: 130px;
+  width: 40%;
 }
 
 .Navigator .Dots {
-    height: 40px;
-    margin-inline: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
+  height: 40px;
+  margin-inline: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
 }
 
 .Navigator .Dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--clr-silver-sand);
-    border-radius: 1vmax;
-    cursor: pointer;
-    transition: background-color .4s, transform .4s;
+  width: 6px;
+  height: 6px;
+  background-color: var(--clr-silver-sand);
+  border-radius: 1vmax;
+  cursor: pointer;
+  transition: background-color 0.4s, transform 0.4s;
 }
 
 .Navigator .Dot.active {
-    background-color: var(--clr-porsche);
-    transform: scale(1.4);
+  background-color: var(--clr-porsche);
+  transform: scale(1.4);
 }
 /* Github button styles */
 .Editor .GithubButton {
-    width: 50px;
-    height: 50px;
-    border-radius: 100vmax;
-    position: absolute;
-    left: calc(50% - 23px);
-    bottom: -80px;
-    background-color: #f7f7f7 !important;
-    color: var(--clr-light-taupe) !important;
-    text-decoration: none;
-    overflow: hidden;
-    transition: .3s ease-in-out all;
+  width: 50px;
+  height: 50px;
+  border-radius: 100vmax;
+  position: absolute;
+  left: calc(50% - 23px);
+  bottom: -80px;
+  background-color: #f7f7f7 !important;
+  color: var(--clr-light-taupe) !important;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.3s ease-in-out all;
 }
 
 .Editor .GithubButton svg {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 .Editor .GithubButton p {
-    display: none;
+  display: none;
 }
 
 .Editor .GithubButton:hover {
-    width: 200px;
-    height: 50px;
-    left: calc(50% - 93px);
+  width: 200px;
+  height: 50px;
+  left: calc(50% - 93px);
 }
 
 .Editor .GithubButton:hover p {
-    display: inline;
+  display: inline;
 }
 /* previeew button styles */
 .Editor .PreviewBtn {
-    display: none;
-    width: 130px;
-    position: fixed;
-    bottom: 20px;
-    left: calc(50% - 65px);
-    z-index: 2;
-    box-shadow: 0px 8px 15px rgba(128, 96, 11, 0.5);
+  display: none;
+  width: 130px;
+  position: fixed;
+  bottom: 20px;
+  left: calc(50% - 65px);
+  z-index: 2;
+  box-shadow: 0px 8px 15px rgba(128, 96, 11, 0.5);
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin: 0px auto;
+  font-size: 1.5rem;
+  margin: 0px auto;
 }
 
 label {
-    display: block;
-    margin-left: 6px;
-    color: var(--clr-tuatara);
-    font-size: 1rem;
+  display: block;
+  margin-left: 6px;
+  color: var(--clr-tuatara);
+  font-size: 1rem;
 }
 
 input,
 textarea {
-    width: 100%;
-    margin-top: 6px;
-    padding: 8px 14px;
-    color: var(--clr-tuatara);
-    border: 1px solid transparent;
-    border-radius: 10px;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    transition: all .3s, transform .2s;
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 14px;
+  color: var(--clr-tuatara);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s, transform 0.2s;
 }
 
 textarea {
-    height: 150px !important;
-    resize: none;
+  height: 140px !important;
+  resize: none;
 }
 
 textarea:hover,
 input:hover {
   background-color: var(--clr-silver-sand);
+}
+
+textarea:focus,
+input:focus {
+  background-color: var(--clr-silver-sand);
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+textarea:active,
+input:active  {
+    transform: scale(.975);
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 12px;
+}
+
+.Container>.Button.Delete, 
+.Container>.Button.New {
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.Container>.Button.New {
+    width: 90px;
+}
+
+.Skills {
+    margin-top: 10px;
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+}
+
+.Skills input {
+    margin: 0;
+}
+
+.Skill {
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    gap: 10px;
+}
+
+.Info .Input:nth-child(3),
+.Info .Input:last-child,
+.Contact .Input:first-child,
+.Contact .Input:nth-child(2),
+.Work .Input:last-child {
+    grid-column: 1 / 3;
 }

@@ -30,7 +30,7 @@ function Info({ data, setData }) {
 
   return (
     <Form
-      className="info"
+      className="Info"
       inputFields={inputFields}
       data={info}
       handleInput={handleInput}
