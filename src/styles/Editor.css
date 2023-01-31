@@ -100,7 +100,7 @@
   display: inline;
   color: var(--clr-dark-blue);
 }
-/* previeew button styles */
+/* preview button styles */
 .Editor .PreviewBtn {
   display: none;
   width: 130px;
@@ -108,7 +108,7 @@
   bottom: 20px;
   left: calc(50% - 65px);
   z-index: 2;
-  box-shadow: 0px 8px 15px rgba(128, 96, 11, 0.5);
+  box-shadow: 0px 8px 15px rgba(144, 225, 250, 0.5);
 }
 
 h3 {

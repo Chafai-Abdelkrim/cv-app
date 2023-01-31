@@ -193,3 +193,16 @@ main .ExperienceItem h4 {
 .ExperienceItem p {
   font-size: 14px;
 }
+/* media query */
+@media (max-width: 1000px) {
+  .Preview {
+    background-color: var(--clr-dark-blue);
+    transition: opacity 0.3s;
+    position: fixed;
+    bottom: 0;
+  }
+  .Preview.exiting,
+  .Preview.exited {
+      
+  }
+}
