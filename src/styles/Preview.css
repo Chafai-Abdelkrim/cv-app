@@ -203,6 +203,18 @@ main .ExperienceItem h4 {
   }
   .Preview.exiting,
   .Preview.exited {
-      
+    opacity: 0;
+    pointer-events: none;
+  }
+  .PreviewContainer {
+    min-width: 100vw;
+    max-width: 100vw;
+  }
+  .PreviewContent {
+    padding: 20px !important;
+  }
+  .Zoom {
+    top: 20px;
+    bottom: auto;
   }
 }
