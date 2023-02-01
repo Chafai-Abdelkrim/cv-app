@@ -17,7 +17,7 @@ const maxScale = 1.5;
 
 function Preview(props) {
   const { data, screenshotRef, transformRef, state } = props;
-  const { info, contact, education, work, skills } = data;
+  const { info, contact, education, work, skills, image } = data;
 
   const [windowWidth, windowHeight] = useWindowSize();
 
@@ -51,7 +51,7 @@ function Preview(props) {
           contentClass="PreviewContent"
         >
           <div className="Resume" ref={screenshotRef}>
-            <Header info={info} />
+            <Header info={info} image={image} />
             <Sidebar contact={contact} education={education} skills={skills} />
             <main>
               <section className="Profile">

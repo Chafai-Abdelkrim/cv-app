@@ -5,6 +5,7 @@ import Contact from './components/Contact';
 import Education from './components/Education';
 import Work from './components/Work';
 import Skills from './components/Skills';
+import Image from './components/Image';
 import Navigator from './components/Navigator';
 import Button from '../Button';
 import GithubButton from './components/GithubButton';
@@ -56,6 +57,9 @@ function Editor(props) {
       break;
     case 'Skills':
       formPage = <Skills data={data} setData={setData} />;
+      break;
+    case 'Image':
+      formPage = <Image data={data} setData={setData} />;
       break;
     default:
       formPage = <h1>Something went wrong</h1>;

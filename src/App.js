@@ -26,6 +26,7 @@ function App() {
         'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==',
       imagePosition: { x: 0.5, y: 0.5 },
       imageScale: 1,
+      canvas: '',
     },
   });
 
