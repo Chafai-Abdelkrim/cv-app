@@ -11,14 +11,15 @@ import GithubButton from './components/GithubButton';
 import { RiEditLine, RiSaveLine, RiCodeLine, RiEyeLine } from 'react-icons/ri';
 import '../../styles/Editor.css';
 
-const editors = [
+const formPages = [
   { name: 'Info' },
   { name: 'Contact' },
   { name: 'Education' },
   { name: 'Work' },
   { name: 'Skills' },
+  { name: 'Image' },
 ];
-editors.forEach((editor) => (editor.key = uniqid()));
+formPages.forEach((formPage) => (formPage.key = uniqid()));
 
 function Editor(props) {
   const { data, setData, autofill, saveCV, togglePreview } = props;
@@ -31,7 +32,7 @@ function Editor(props) {
       label="Autofill"
       handleClick={() => {
         autofill();
-        setActivePage(editors.length - 1);
+        setActivePage(formPages.length - 1);
       }}
     />
   );
@@ -39,51 +40,50 @@ function Editor(props) {
     <Button icon={<RiSaveLine />} lable="Save" handleClick={saveCV} />
   );
 
-  let editor;
-  switch (editors[activePage].name) {
+  let formPage;
+  switch (formPages[activePage].name) {
     case 'Info':
-      editor = <Info data={data} setData={setData} />;
+      formPage = <Info data={data} setData={setData} />;
       break;
     case 'Contact':
-      editor = <Contact data={data} setData={setData} />;
+      formPage = <Contact data={data} setData={setData} />;
       break;
     case 'Education':
-      editor = <Education data={data} setData={setData} />;
+      formPage = <Education data={data} setData={setData} />;
       break;
     case 'Work':
-      editor = <Work data={data} setData={setData} />;
+      formPage = <Work data={data} setData={setData} />;
       break;
     case 'Skills':
-      editor = <Skills data={data} setData={setData} />;
+      formPage = <Skills data={data} setData={setData} />;
       break;
     default:
-      editor = <h1>Something went wrong</h1>;
+      formPage = <h1>Something went wrong</h1>;
   }
 
   return (
     <div className="Editor">
-      <h3>{editors[activePage].name}</h3>
-      {editor}
-      <Navigator 
+      <h3>{formPages[activePage].name}</h3>
+      {formPage}
+      <Navigator
         index={activePage}
         setIndex={setActivePage}
-        items={editors}
+        items={formPages}
         firstButton={autofillBtn}
         lastButton={saveBtn}
       />
-      <GithubButton username='Chafai-Abdelkrim' />
-      <Button 
-        className='PreviewBtn'
+      <GithubButton username="Chafai-Abdelkrim" />
+      <Button
+        className="PreviewBtn"
         icon={isPreviewVisible ? <RiCodeLine /> : <RiEyeLine />}
         label={isPreviewVisible ? 'Editor' : 'Preview'}
         handleClick={() => {
-          togglePreviewVisible(prevState => !prevState);
+          togglePreviewVisible((prevState) => !prevState);
           togglePreview();
         }}
       />
     </div>
   );
 }
-
 
 export default Editor;

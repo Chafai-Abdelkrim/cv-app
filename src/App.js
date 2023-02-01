@@ -21,6 +21,12 @@ function App() {
     education: createItems(1),
     work: createItems(1),
     skills: createItems(3),
+    image: {
+      imageUrl:
+        'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==',
+      imagePosition: { x: 0.5, y: 0.5 },
+      imageScale: 1,
+    },
   });
 
   const screenshotRef = createRef(null);
@@ -33,22 +39,22 @@ function App() {
   };
 
   return (
-      <div className='App'>
-          <Editor 
-            data={data}
-            setData={setData}
-            autofill={() => setData(generateData())}
-            saveCV={saveCV}
-            togglePreview={togglePreview}
-          />
-          <Preview 
-            data={data}
-            screenshotRef={screenshotRef}
-            transformRef={transformRef}
-            state={previewState.status}
-          />
-      </div>
-  )
+    <div className="App">
+      <Editor
+        data={data}
+        setData={setData}
+        autofill={() => setData(generateData())}
+        saveCV={saveCV}
+        togglePreview={togglePreview}
+      />
+      <Preview
+        data={data}
+        screenshotRef={screenshotRef}
+        transformRef={transformRef}
+        state={previewState.status}
+      />
+    </div>
+  );
 }
 
 export default App;
