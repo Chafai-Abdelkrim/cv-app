@@ -7,7 +7,7 @@ function Header({ info, image }) {
   const addImage = (canvas) => {
     if (canvas)
       return <img className="image-placeholder" src={canvas} alt="Avatar" />;
-    if (!canvas) return <div className="mage-placeholder"></div>;
+    if (!canvas) return <div className="image-placeholder"></div>;
   };
 
   return (

@@ -56,6 +56,13 @@ function generateData() {
       { name: 'CSS' },
       { name: 'C#' },
     ],
+    image: {
+      imageUrl:
+        'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==',
+      imagePosition: { x: 0.5, y: 0.5 },
+      imageScale: 1,
+      canvas: '',
+    },
   };
 
   [...data.education, ...data.work, ...data.skills].forEach(
