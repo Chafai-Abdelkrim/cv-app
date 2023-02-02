@@ -4,16 +4,6 @@ import AvatarEditor from 'react-avatar-editor';
 function Image({ data, setData }) {
   const { image } = data;
 
-  const updateImageValue = (name, value) => {
-    setData({
-      ...data,
-      image: {
-        ...data.image,
-        [name]: value,
-      },
-    });
-  };
-
   const updateImageState = (event) => {
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
@@ -31,20 +21,39 @@ function Image({ data, setData }) {
   };
 
   const handleZoom = (e) => {
-    updateImageValue('imageScale', e.target.value / 50);
-    updateImage();
+    const scale = e.target.value / 50;
+    setData({
+      ...data,
+      image: {
+        ...data.image,
+        imageScale: scale,
+      },
+    });
+    
   };
 
   const handlePositionChange = (position) => {
-    updateImageValue('imagePosition', position);
-    updateImage();
+    setData({
+      ...data,
+      image: {
+        ...data.image,
+        imagePosition: position,
+      },
+    });
   };
 
   const editorRef = useRef(null);
   const updateImage = () => {
     if (editorRef.current) {
       const canvas = editorRef.current.getImage();
-      updateImageValue('canvas', canvas.toDataURL());
+      const dataUrl = canvas.toDataURL();
+      setData({
+        ...data,
+        image: {
+          ...data.image,
+          canvas: dataUrl,
+        },
+      });
     }
   };
 
