@@ -111,7 +111,7 @@ main,
   padding: 45px 40px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 35px;
 }
 /* Sidebar styles */
 .Sidebar {
