@@ -46,8 +46,16 @@ header {
 }
 
 .image-placeholder {
+  margin: auto;
   grid-column: 1 / 2;
   grid-row: 1 / 3;
+  width: 200px;
+  aspect-ratio: 1;
+  background-color: aliceblue;
+  border-radius: 100vmax;
+  border: .5rem solid var(--clr-light-blue);
+  outline: 0.75rem double var(--clr-dark-blue);
+  outline-offset: -.5rem;
 }
 
 header h1,
@@ -61,7 +69,7 @@ header h2 {
 header h1 {
   height: 170px;
   gap: 30px;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 300;
   letter-spacing: 10px;
 }
@@ -76,7 +84,7 @@ header h2 {
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 5px;
-  border-bottom: 2px solid var(--clr-light-blue);
+  border-radius: 2rem;
 }
 
 .Detail {
